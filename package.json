@@ -1,13 +1,14 @@
 {
   "name": "stylus-extra",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Wrap stylus to ease recursive file detection and watching",
   "main": "stylus-extra.js",
   "bin": "./stylus-extra.js",
   "scripts": {
     "commit": "git-cz",
     "test": "jest",
-    "deploy": "npm publish"
+    "test-coverage": "jest --coverage",
+    "release": "semantic-release"
   },
   "homepage": "https://github.com/Alexgalinier/stylus-exta",
   "keywords": [
@@ -16,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Alexgalinier/stylus-exta.git"
+    "url": "https://github.com/Alexgalinier/stylus-exta.git"
   },
   "bugs": {
     "url": "https://github.com/Alexgalinier/stylus-exta/issues"
@@ -26,9 +27,6 @@
   "engines": {
     "node": ">=8"
   },
-  "files": [
-    "index.js"
-  ],
   "dependencies": {
     "chalk": "^2.3.2",
     "commander": "^2.15.0",
@@ -40,7 +38,8 @@
   "devDependencies": {
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
-    "jest": "^22.4.2"
+    "jest": "^22.4.2",
+    "semantic-release": "^15.0.3"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -51,5 +50,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "release": {
+    "verifyConditions": ["@semantic-release/changelog", "@semantic-release/npm", "@semantic-release/git"],
+    "prepare": ["@semantic-release/changelog", "@semantic-release/npm", "@semantic-release/git"]
   }
 }
