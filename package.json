@@ -1,0 +1,55 @@
+{
+  "name": "stylus-extra",
+  "version": "1.0.0",
+  "description": "Wrap stylus to ease recursive file detection and watching",
+  "main": "stylus-extra.js",
+  "bin": "./stylus-extra.js",
+  "scripts": {
+    "commit": "git-cz",
+    "test": "jest",
+    "deploy": "npm publish"
+  },
+  "homepage": "https://github.com/Alexgalinier/stylus-exta",
+  "keywords": [
+    "stylus",
+    "watcher"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexgalinier/stylus-exta.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Alexgalinier/stylus-exta/issues"
+  },
+  "author": "Alexgalinier",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "commander": "^2.15.0",
+    "fs-extra": "^5.0.0",
+    "glob": "^7.1.2",
+    "sane": "^2.4.1",
+    "stylus": "^0.54.5"
+  },
+  "devDependencies": {
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0",
+    "jest": "^22.4.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.js"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
