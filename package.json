@@ -1,6 +1,6 @@
 {
   "name": "stylus-extra",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Wrap stylus to ease recursive file detection and watching",
   "main": "stylus-extra.js",
   "bin": "./stylus-extra.js",
@@ -36,6 +36,8 @@
     "stylus": "^0.54.5"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^2.0.1",
+    "@semantic-release/git": "^4.0.1",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
     "jest": "^22.4.2",
@@ -52,7 +54,19 @@
     }
   },
   "release": {
-    "verifyConditions": ["@semantic-release/changelog", "@semantic-release/npm", "@semantic-release/git"],
-    "prepare": ["@semantic-release/changelog", "@semantic-release/npm", "@semantic-release/git"]
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ],
+    "prepare": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ],
+    "publish": [
+      "@semantic-release/github",
+      "@semantic-release/npm"
+    ]
   }
 }
