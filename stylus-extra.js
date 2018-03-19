@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const build = require('./src/build');
 const watch = require('./src/watch');
 const chalk = require('chalk');
