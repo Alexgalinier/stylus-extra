@@ -33,9 +33,7 @@ module.exports = async (srcDir, outDir, specificFile = null) => {
     files = await globP(srcGlob);
 
     if (files.length === 0) {
-      console.error(
-        `[${chalk.red('Error')}] no matching found with: ${srcGlob}`
-      );
+      console.error(`[${chalk.red('Error')}] no matching found with: ${srcGlob}`);
       process.exit(1);
     }
   }
@@ -44,18 +42,13 @@ module.exports = async (srcDir, outDir, specificFile = null) => {
     files.map(async _ => {
       try {
         const time = process.hrtime();
-        const dest =
-          outDir + _.replace(srcDir, '').replace('.styl', '.css');
+        const dest = outDir + _.replace(srcDir, '').replace('.styl', '.css');
 
         const fileContent = await fs.readFile(_, 'utf8');
         const css = await stylusP(fileContent);
         await fs.ensureFile(dest);
         await fs.writeFile(dest, css);
-        console.log(
-          `Generated ${dest} ${chalk.grey(
-            benchmark(process.hrtime(time)) + 'ms'
-          )}`
-        );
+        console.log(`Generated ${dest} ${chalk.grey(benchmark(process.hrtime(time)) + 'ms')}`);
       } catch (e) {
         console.error(e.message);
         console.error(`[${chalk.red('Error')}] occured for file: ${_}`);
