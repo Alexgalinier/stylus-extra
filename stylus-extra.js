@@ -8,20 +8,11 @@ let program = require('commander');
 let programSrc = null;
 
 program
-  .description(
-    'Search recursivly *.styl files, transform and copy them to css into the --out folder.'
-  )
+  .description('Search recursivly *.styl files, transform and copy them to css into the --out folder.')
   .version(require('./package.json').version, '-v, --version')
   .arguments('<src>')
-  .option(
-    '-w, --watch',
-    'watch all .styl files inside current directory (ignore "node_modules" folder).'
-  )
-  .option(
-    '-o, --out [dir]',
-    'output css files to folder [dir]. Keep the same file structure.',
-    'lib'
-  )
+  .option('-w, --watch', 'watch all .styl files inside current directory (ignore "node_modules" folder).')
+  .option('-o, --out [dir]', 'output css files to folder [dir]. Keep the same file structure.', 'lib')
   .action(_ => (programSrc = _))
   .parse(process.argv);
 
