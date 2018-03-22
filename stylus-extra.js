@@ -19,10 +19,10 @@ program
 if (!programSrc) {
   console.error(`[${chalk.red('Error')}] you must specify a <src> folder`);
   process.exit(1);
-}
-
-if (program.watch) {
-  watch(programSrc, program.out);
 } else {
-  build(programSrc, program.out);
+  if (program.watch) {
+    watch(programSrc, program.out);
+  } else {
+    build(programSrc, program.out);
+  }
 }
