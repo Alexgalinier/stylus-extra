@@ -1,7 +1,7 @@
 # stylus-extra
 
-[![Build Status](https://travis-ci.org/Alexgalinier/stylus-exta.svg?branch=master)](https://travis-ci.org/Alexgalinier/stylus-exta)
-[![codecov](https://codecov.io/gh/Alexgalinier/stylus-exta/branch/develop/graph/badge.svg)](https://codecov.io/gh/Alexgalinier/stylus-exta)
+[![Build Status](https://travis-ci.org/Alexgalinier/stylus-extra.svg?branch=master)](https://travis-ci.org/Alexgalinier/stylus-extra)
+[![codecov](https://codecov.io/gh/Alexgalinier/stylus-extra/branch/master/graph/badge.svg)](https://codecov.io/gh/Alexgalinier/stylus-extra)
 [![Greenkeeper badge](https://badges.greenkeeper.io/Alexgalinier/stylus-exta.svg)](https://greenkeeper.io/)
 
 Wrap stylus to ease recursive file detection and watching.
