@@ -1,6 +1,6 @@
 {
   "name": "stylus-extra",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Wrap stylus to ease recursive file detection and watching",
   "main": "stylus-extra.js",
   "bin": "./stylus-extra.js",
@@ -55,7 +55,7 @@
     "collectCoverageFrom": [
       "**/*.js"
     ],
-    "coveragePathIgnorePatterns":[
+    "coveragePathIgnorePatterns": [
       "/node_modules/",
       "watch.js"
     ]
