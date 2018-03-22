@@ -54,6 +54,10 @@
   "jest": {
     "collectCoverageFrom": [
       "**/*.js"
+    ],
+    "coveragePathIgnorePatterns":[
+      "/node_modules/",
+      "watch.js"
     ]
   },
   "config": {
