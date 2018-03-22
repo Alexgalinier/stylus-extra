@@ -22,7 +22,7 @@ function formatPath(path) {
   return path;
 }
 
-module.exports = async (srcDir, outDir, specificFile = null) => {
+module.exports = async (srcDir, outDir, specificFile = null, failOnError = true) => {
   let files;
 
   const absoluteSrcDir = formatPath(srcDir);
@@ -36,7 +36,7 @@ module.exports = async (srcDir, outDir, specificFile = null) => {
 
     if (files.length === 0) {
       console.error(`[${chalk.red('Error')}] no matching found with: ${srcGlob}`);
-      process.exit(1);
+      if (failOnError) process.exit(1);
     }
   }
 
@@ -60,7 +60,7 @@ module.exports = async (srcDir, outDir, specificFile = null) => {
       } catch (e) {
         console.error(e.message);
         console.error(`[${chalk.red('Error')}] occured for file: ${_}`);
-        process.exit(1);
+        if (failOnError) process.exit(1);
       }
     })
   );
