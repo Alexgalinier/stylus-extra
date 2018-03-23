@@ -16,17 +16,17 @@
       "pre-commit": "npm run pretty"
     }
   },
-  "homepage": "https://github.com/Alexgalinier/stylus-exta",
+  "homepage": "https://github.com/Alexgalinier/stylus-extra",
   "keywords": [
     "stylus",
     "watcher"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Alexgalinier/stylus-exta.git"
+    "url": "https://github.com/Alexgalinier/stylus-extra.git"
   },
   "bugs": {
-    "url": "https://github.com/Alexgalinier/stylus-exta/issues"
+    "url": "https://github.com/Alexgalinier/stylus-extra/issues"
   },
   "author": "Alexgalinier",
   "license": "MIT",
