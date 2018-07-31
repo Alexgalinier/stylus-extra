@@ -38,7 +38,7 @@
     "commander": "^2.15.1",
     "fs-extra": "^5.0.0",
     "glob": "^7.1.2",
-    "sane": "^2.5.0",
+    "sane": "^3.0.0",
     "stylus": "^0.54.5"
   },
   "devDependencies": {
